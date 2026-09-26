@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Informático</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>💻 RETO INFORMÁTICO 🎮</h1>
+        <p>Demuestra cuánto sabes y llega al Top 10</p>
+
+        <button onclick="modoOscuro()" class="boton-modo">
+            🌙 Modo oscuro
+        </button>
+    </header>
+
+    <!-- INICIO -->
+    <section id="inicio" class="pantalla">
+        <div class="tarjeta">
+            <h2>🚀 ¡Bienvenido!</h2>
+
+            <p>
+                Responde preguntas, gana puntos y trata de entrar
+                en la tabla de los 10 mejores jugadores.
+            </p>
+
+            <input
+                type="text"
+                id="nombreJugador"
+                placeholder="Escribe tu nombre"
+                maxlength="20"
+            >
+
+            <button onclick="comenzarJuego()" class="boton">
+                ▶ Comenzar
+            </button>
+
+            <p id="mensaje"></p>
+        </div>
+    </section>
+
+
+    <!-- PREGUNTAS -->
+    <section id="quiz" class="pantalla oculto">
+
+        <div class="tarjeta quiz">
+
+            <div class="barra-superior">
+                <span id="numeroPregunta">Pregunta 1 de 10</span>
+                <span>⭐ Puntos: <b id="puntos">0</b></span>
+            </div>
+
+            <div class="barra">
+                <div id="progreso"></div>
+            </div>
+
+            <h2 id="pregunta"></h2>
+
+            <div id="respuestas"></div>
+
+            <button onclick="siguientePregunta()" class="boton">
+                Siguiente ➡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- JUEGO -->
+    <section id="minijuego" class="pantalla oculto">
+
+        <div class="tarjeta">
+
+            <h2>🎮 Mini Juego</h2>
+
+            <p>
+                Adivina el número secreto entre <b>1 y 10</b>.
+            </p>
+
+            <input
+                type="number"
+                id="numero"
+                min="1"
+                max="10"
+                placeholder="Escribe un número"
+            >
+
+            <button onclick="adivinar()" class="boton">
+                🎯 Adivinar
+            </button>
+
+            <p id="resultadoJuego"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTADO -->
+    <section id="resultado" class="pantalla oculto">
+
+        <div class="tarjeta">
+
+            <h2>🏆 Resultado</h2>
+
+            <h3 id="nombreResultado"></h3>
+
+            <p class="puntuacion">
+                ⭐ <span id="puntuacionFinal">0</span> puntos
+            </p>
+
+            <p id="mensajeFinal"></p>
+
+            <button onclick="guardarJugador()" class="boton">
+                💾 Guardar resultado
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- TABLA -->
+    <section id="ranking" class="pantalla">
+
+        <div class="tarjeta tabla">
+
+            <h2>🏆 TOP 10 JUGADORES</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Jugador</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaJugadores"></tbody>
+
+            </table>
+
+            <button onclick="borrarRanking()" class="boton borrar">
+                🗑️ Borrar ranking
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>💻 Reto Informático | Proyecto de Desarrollo de Software</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

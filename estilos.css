@@ -1,0 +1,249 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10152b, #162d50, #10152b);
+    color: white;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 2px solid #00e5ff;
+}
+
+header h1 {
+    font-size: 35px;
+    color: #00e5ff;
+    text-shadow: 0 0 15px #00e5ff;
+}
+
+header p {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+.boton-modo {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.pantalla {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.tarjeta {
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tarjeta h2 {
+    margin-bottom: 20px;
+    color: #00e5ff;
+}
+
+.tarjeta p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 14px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.boton {
+    display: block;
+    margin: 20px auto 0;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #00c8ff;
+    color: #001018;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+#progreso {
+    width: 10%;
+    height: 100%;
+    background: #00e5ff;
+    transition: 0.3s;
+}
+
+#respuestas {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.respuesta {
+    padding: 15px;
+    background: rgba(0, 229, 255, 0.12);
+    color: white;
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.respuesta:hover {
+    background: #00c8ff;
+    color: #001018;
+}
+
+.respuesta.correcta {
+    background: #1db954;
+}
+
+.respuesta.incorrecta {
+    background: #e63946;
+}
+
+.oculto {
+    display: none;
+}
+
+.puntuacion {
+    font-size: 35px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th {
+    background: #00c8ff;
+    color: #001018;
+    padding: 14px;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+tr:nth-child(1) td {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+tr:nth-child(2) td {
+    color: #c0c0c0;
+}
+
+tr:nth-child(3) td {
+    color: #cd7f32;
+}
+
+.borrar {
+    background: #e63946;
+    color: white;
+}
+
+#mensaje {
+    color: #ff6b6b;
+    margin-top: 15px;
+}
+
+#resultadoJuego {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+}
+
+
+/* MODO OSCURO */
+
+body.oscuro {
+    background: #050505;
+}
+
+body.oscuro .tarjeta {
+    background: rgba(255,255,255,0.05);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .barra-superior {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
